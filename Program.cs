@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication4
+namespace Basic_algos
 {
     class Program
     {
@@ -201,7 +201,10 @@ namespace ConsoleApplication4
         /* Двоичный поиск
          * Возвращает результат поиска
          * 
-         * 
+         * sElem - искомый элемент массива
+         * first - первый элемент массива
+         * last - последний элемент массива
+         * mid - середина массива
          */
         static int? binSearch(int[] arr, int sElem)
         {
@@ -234,6 +237,7 @@ namespace ConsoleApplication4
             }
         }
 
+        // Линейный поиск
         static int? linSearch(int[] arr, int sElem)
         {
             if (arr.Length == 0)
@@ -254,17 +258,19 @@ namespace ConsoleApplication4
             return -1;
         }
 
+        // Реверс строки
         static void strReverse()
         {
-            string s = "Пирожок";
-            Console.WriteLine(s);
+            Console.WriteLine("Реверс строки");
+            string s = Convert.ToString(Console.ReadLine());
             char[] sArr = s.ToCharArray();
             Array.Reverse(sArr);
             string rS = new string(sArr);
             Console.Write(rS);
         }
 
-        static string shifter(string str, int shift)
+        // Шифр Цезаря
+        static string caesarShifter(string str, int shift)
         {
             string UserOutput = null;
             char[] A = null;
@@ -279,7 +285,8 @@ namespace ConsoleApplication4
             return UserOutput;
         }
 
-        static void caesarShift()
+        // Вывод результата шифра Цезаря
+        static void caesar()
         {
             string UserString;
             int shift;
@@ -295,7 +302,7 @@ namespace ConsoleApplication4
 
             Console.Write("Your encrypted string is: ");
             //Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine(shifter(UserString, shift));
+            Console.WriteLine(caesarShifter(UserString, shift));
         }
 
     static void Main(string[] args)
@@ -328,7 +335,7 @@ namespace ConsoleApplication4
                     strReverse();
                     break;
                 case 6:
-                    caesarShift();
+                    caesar();
                     break;        
             }
             Console.ReadKey();
