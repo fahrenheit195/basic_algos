@@ -291,17 +291,12 @@ namespace Basic_algos
             string UserString;
             int shift;
             Console.WriteLine("type a string to encrypt:");
-           // Console.ForegroundColor = ConsoleColor.Yellow;
             UserString = Console.ReadLine();
-            //Console.ForegroundColor = ConsoleColor.Gray;
 
             Console.WriteLine("How many chars would you like to shift?: :");
-            //Console.ForegroundColor = ConsoleColor.Yellow;
             shift = int.Parse(Console.ReadLine());
-            //Console.ForegroundColor = ConsoleColor.Gray;
 
             Console.Write("Your encrypted string is: ");
-            //Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(caesarShifter(UserString, shift));
         }
 
